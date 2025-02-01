@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscs on Try 的博客</title>
+    <link>http://localhost:1313/misc/</link>
+    <description>Recent content in Miscs on Try 的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>itry2079@gmail.com (Chill Try)</managingEditor>
+    <webMaster>itry2079@gmail.com (Chill Try)</webMaster>
+    <copyright>© 2025 Chill Try</copyright>
+    <lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>扫码加 QQ</title>
+      <link>http://localhost:1313/misc/add_qq/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <author>itry2079@gmail.com (Chill Try)</author>
+      <guid>http://localhost:1313/misc/add_qq/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
+  腾讯真有你的，QQ 跳转链接也失效了 🙁
+&lt;/div&gt;
+
+&lt;p&gt;尝试 &lt;a href=&#34;http://wpa.qq.com/msgrd?v=3&amp;amp;uin=2779480608&amp;amp;site=qq&amp;amp;menu=yes&#34; target=&#34;_blank&#34;&gt;跳转链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;尝试 &lt;a href=&#34;tencent://message/?uin=2779480608&#34;&gt;拉起 QQ&lt;/a&gt;&lt;/p&gt;
+&lt;style&gt;
+    .qrcode {
+        max-width: 100%; /* 图片最大宽度 */
+        max-height: 500px; /* 图片最大高度 */
+        border: 3px solid #ccc; /* 图片边框 */
+        border-radius: 20px; /* 图片圆角 */
+    }
+    .caption {
+        margin-top: 20px; /* 文字与图片的间距 */
+        font-size: 18px; /* 文字大小 */
+        color: #333; /* 文字颜色 */
+        font-family: Arial, sans-serif; /* 字体 */
+    }
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;img src=&#34;./try_qrcode.png&#34; alt=&#34;扫码加 QQ&#34; class=&#34;qrcode&#34;&gt;
+&lt;/body&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>扫码添加微信</title>
+      <link>http://localhost:1313/misc/add_wechat/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <author>itry2079@gmail.com (Chill Try)</author>
+      <guid>http://localhost:1313/misc/add_wechat/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
+  2025 年了，微信创建跳转 URL 还这么费劲 🙁
+&lt;/div&gt;
+
+&lt;style&gt;
+    .qrcode {
+        max-width: 100%; /* 图片最大宽度 */
+        max-height: 500px; /* 图片最大高度 */
+        border: 3px solid #ccc; /* 图片边框 */
+        border-radius: 20px; /* 图片圆角 */
+    }
+    .caption {
+        margin-top: 20px; /* 文字与图片的间距 */
+        font-size: 18px; /* 文字大小 */
+        color: #333; /* 文字颜色 */
+        font-family: Arial, sans-serif; /* 字体 */
+    }
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;img src=&#34;./try_qrcode.png&#34; alt=&#34;扫码加微信，他*的**微信跳转链接都没有&#34; class=&#34;qrcode&#34;&gt;
+&lt;/body&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
