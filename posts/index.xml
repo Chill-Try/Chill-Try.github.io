@@ -9,12 +9,12 @@
     <managingEditor>itry2079@gmail.com (Chill Try)</managingEditor>
     <webMaster>itry2079@gmail.com (Chill Try)</webMaster>
     <copyright>© 2025 Chill Try</copyright>
-    <lastBuildDate>Fri, 31 Jan 2025 16:44:52 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>早上好中国</title>
       <link>http://localhost:1313/posts/good_morning_china/</link>
-      <pubDate>Fri, 31 Jan 2025 16:44:52 +0800</pubDate>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
       <author>itry2079@gmail.com (Chill Try)</author>
       <guid>http://localhost:1313/posts/good_morning_china/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;早上好中国 
@@ -55,16 +55,36 @@
     </item>
     
     <item>
+      <title>让 Win10 拥有夜间模式，并实现自动化切换</title>
+      <link>http://localhost:1313/posts/win_night_mode/</link>
+      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+      <author>itry2079@gmail.com (Chill Try)</author>
+      <guid>http://localhost:1313/posts/win_night_mode/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
+  &lt;strong&gt;简单实用&lt;/strong&gt;的脚本教程&lt;/br&gt;
+且&lt;strong&gt;无须配置&lt;/strong&gt;任何环境
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;我们码农，都很贫穷&lt;/em&gt;&lt;/br&gt;
+&lt;em&gt;夜间屏幕&lt;strong&gt;刺眼&lt;/strong&gt;的白光，时刻暗示电费的流逝&lt;/em&gt;&lt;/br&gt;
+&lt;em&gt;为了让你的显示器，在&lt;strong&gt;夜晚&lt;/strong&gt;拥有&lt;strong&gt;星空&lt;/strong&gt;的颜色&lt;/em&gt;&lt;/br&gt;
+&lt;em&gt;和我一起完成这个脚本，保护你的眼睛 &lt;del&gt;，买 OLED 屏&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>从这里开始 - 第一篇文章</title>
       <link>http://localhost:1313/posts/hello_try/</link>
-      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
       <author>itry2079@gmail.com (Chill Try)</author>
       <guid>http://localhost:1313/posts/hello_try/</guid>
       <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
   这是 &lt;strong&gt;Try&lt;/strong&gt; 的第一篇博客文章
 &lt;/div&gt;
 
-&lt;/br&gt;
+&lt;hr&gt;
 &lt;p&gt;你好，我是 &lt;strong&gt;Try&lt;/strong&gt; 😉&lt;/p&gt;
 &lt;p&gt;从今天起，我将在这里&lt;strong&gt;写点东西&lt;/strong&gt;&lt;/p&gt;</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/hello_try/featured.jpg" />

@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-CN" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>让 Win10 拥有夜间模式，并实现自动化切换 &middot; Try 的博客</title>
+  <meta name="title" content="让 Win10 拥有夜间模式，并实现自动化切换 &middot; Try 的博客" />
+  
+  <meta name="description" content="脚本教程" />
+  <meta name="keywords" content="码农, 技术, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/win_night_mode/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.68ed33fd20094e842a1c4038bb7d6d49f485a1ebba2d95b39886881a38aa1264336cf6073331b3826e1c978d8952aaa5e5601a888414ff9635cb6ae95db0eb7c.css"
+    integrity="sha512-aO0z/SAJToQqHEA4u31tSfSFoeu6LZWzmIaIGjiqEmQzbPYHMzGzgm4cl42JUqql5WAaiIQU/5Y1y2rpXbDrfA==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.dbecdbe667f8a29aeaff48ee24f4486bb9dd1de8b1376d568b96b1323aa672169aad32d26ea93707e2cdf0a53f097b819d33f9f78e0086092f8cbbbf4ec9a002.js"
+    integrity="sha512-2&#43;zb5mf4oprq/0juJPRIa7ndHeixN21Wi5axMjqmchaarTLSbqk3B&#43;LN8KU/CXuBnTP5944AhgkvjLu/TsmgAg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.c178288131a2f1ad46910438db47ac5f7e1c48cf949e49f6dc3310c8ec9660e23fe505805eba4e2e73711335808500360d773a2b64322feb35df52856edca286.js"
+    integrity="sha512-wXgogTGi8a1GkQQ420esX34cSM&#43;Unkn23DMQyOyWYOI/5QWAXrpOLnNxEzWAhQA2DXc6K2QyL&#43;s131KFbtyihg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/win_night_mode/">
+  <meta property="og:site_name" content="Try 的博客">
+  <meta property="og:title" content="让 Win10 拥有夜间模式，并实现自动化切换">
+  <meta property="og:description" content="脚本教程">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-31T00:00:00+00:00">
+    <meta property="article:tag" content="码农">
+    <meta property="article:tag" content="技术">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="让 Win10 拥有夜间模式，并实现自动化切换">
+  <meta name="twitter:description" content="脚本教程">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "文章",
+    "name": "让 Win10 拥有夜间模式，并实现自动化切换",
+    "headline": "让 Win10 拥有夜间模式，并实现自动化切换",
+    "description": "脚本教程",
+    "abstract": "\u003cdiv class=\u0022lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl\u0022\u003e\n  \u003cstrong\u003e简单实用\u003c\/strong\u003e的脚本教程\u003c\/br\u003e\n且\u003cstrong\u003e无须配置\u003c\/strong\u003e任何环境\n\u003c\/div\u003e\n\n\u003chr\u003e\n\u003cblockquote\u003e\n\u003cp\u003e\u003cem\u003e我们码农，都很贫穷\u003c\/em\u003e\u003c\/br\u003e\n\u003cem\u003e夜间屏幕\u003cstrong\u003e刺眼\u003c\/strong\u003e的白光，时刻暗示电费的流逝\u003c\/em\u003e\u003c\/br\u003e\n\u003cem\u003e为了让你的显示器，在\u003cstrong\u003e夜晚\u003c\/strong\u003e拥有\u003cstrong\u003e星空\u003c\/strong\u003e的颜色\u003c\/em\u003e\u003c\/br\u003e\n\u003cem\u003e和我一起完成这个脚本，保护你的眼睛 \u003cdel\u003e，买 OLED 屏\u003c\/del\u003e\u003c\/em\u003e\u003c\/p\u003e",
+    "inLanguage": "zh-CN",
+    "url" : "http:\/\/localhost:1313\/posts\/win_night_mode\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Chill Try"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-01-31T00:00:00\u002b00:00",
+    "datePublished": "2025-01-31T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-01-31T00:00:00\u002b00:00",
+    
+    "keywords": ["码农","技术"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2241"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Chill Try" />
+  
+  
+  
+  <link href="mailto:itry2079@gmail.com" rel="me" />
+  
+  
+  <link href="misc/add_wechat" rel="me" />
+  
+  
+  <link href="https://github.com/Chill-Try" rel="me" />
+  
+  
+  <link href="misc/add_qq" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3">
+    
+    
+    
+    <div>
+        <a href="/" class="flex">
+            <span class="sr-only">Try 的博客</span>
+
+            
+            <img src="/logo/round-logo-64x64.png" width="32" height="32"
+                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Try 的博客" />
+            
+
+        </a>
+    </div>
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Try 的博客</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="文章">
+        博客文章
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="https://github.com/Chill-Try"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <span  class="mr-1" >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium" title="">
+        GayHub
+    </p>
+</a>
+
+
+
+            
+             
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a  class="text-base font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="">
+      更多
+    </a>
+    <span>
+      
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+        <a href="https://www.kfc.com.cn/" 
+          target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            KFC
+          </p>
+        </a>
+        
+        <a href="https://www.bilibili.com/video/BV1GJ411x7h7" 
+          target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            领取 10 元红包
+          </p>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="文章">
+            博客文章
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://github.com/Chill-Try"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <div  class="mr-2" >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg" title="">
+            GayHub
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                     
+  <li class="mt-1">
+    <a href="" class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            更多
+        </p>
+        <span>
+            
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+        </span>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="https://www.kfc.com.cn/"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            KFC
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="https://www.bilibili.com/video/BV1GJ411x7h7"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            领取 10 元红包
+        </p>
+    </a>
+</li>
+
+<li class="mb-2"></li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/posts/win_night_mode/background.svg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      让 Win10 拥有夜间模式，并实现自动化切换
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-01-31T00:00:00&#43;00:00">25-01-31</time><span class="px-2 text-primary-500">&middot;</span><span>2241 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E7%A0%81%E5%86%9C/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    码农
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%8A%80%E6%9C%AF/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    技术
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#目标">目标</a></li>
+    <li><a href="#测试">测试</a></li>
+    <li><a href="#写-nightmodebat-手动切换夜间模式">写 NightMode.bat (手动切换夜间模式)</a>
+      <ul>
+        <li><a href="#思想是">思想是：</a></li>
+        <li><a href="#稍作优化">稍作优化：</a></li>
+      </ul>
+    </li>
+    <li><a href="#写-auto_nightmodebat-准备自动化">写 Auto_Nightmode.bat (准备自动化)</a></li>
+    <li><a href="#vbscript-使脚本后台运行">VBScript 使脚本后台运行</a></li>
+    <li><a href="#任务计划程序自动执行">任务计划程序（自动执行）</a>
+      <ul>
+        <li><a href="#找出正确时机">找出正确时机：</a></li>
+        <li><a href="#开始操练">开始操练：</a>
+          <ul>
+            <li><a href="#常规设置">常规设置</a></li>
+            <li><a href="#触发器设置">触发器设置</a></li>
+            <li><a href="#操作设置">操作设置</a></li>
+            <li><a href="#设置设置">“设置”设置</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#chrome-浏览器插件">Chrome 浏览器插件</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#目标">目标</a></li>
+    <li><a href="#测试">测试</a></li>
+    <li><a href="#写-nightmodebat-手动切换夜间模式">写 NightMode.bat (手动切换夜间模式)</a>
+      <ul>
+        <li><a href="#思想是">思想是：</a></li>
+        <li><a href="#稍作优化">稍作优化：</a></li>
+      </ul>
+    </li>
+    <li><a href="#写-auto_nightmodebat-准备自动化">写 Auto_Nightmode.bat (准备自动化)</a></li>
+    <li><a href="#vbscript-使脚本后台运行">VBScript 使脚本后台运行</a></li>
+    <li><a href="#任务计划程序自动执行">任务计划程序（自动执行）</a>
+      <ul>
+        <li><a href="#找出正确时机">找出正确时机：</a></li>
+        <li><a href="#开始操练">开始操练：</a>
+          <ul>
+            <li><a href="#常规设置">常规设置</a></li>
+            <li><a href="#触发器设置">触发器设置</a></li>
+            <li><a href="#操作设置">操作设置</a></li>
+            <li><a href="#设置设置">“设置”设置</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#chrome-浏览器插件">Chrome 浏览器插件</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          <div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
+  <strong>简单实用</strong>的脚本教程</br>
+且<strong>无须配置</strong>任何环境
+</div>
+
+<hr>
+<blockquote>
+<p><em>我们码农，都很贫穷</em></br>
+<em>夜间屏幕<strong>刺眼</strong>的白光，时刻暗示电费的流逝</em></br>
+<em>为了让你的显示器，在<strong>夜晚</strong>拥有<strong>星空</strong>的颜色</em></br>
+<em>和我一起完成这个脚本，保护你的眼睛 <del>，买 OLED 屏</del></em></p>
+</blockquote>
+
+
+<h2 class="relative group">目标 
+    <div id="%E7%9B%AE%E6%A0%87" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%9B%AE%E6%A0%87" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>​	一起动手写 <code>Batch</code> 和 <code>VBScript</code></br>
+​	让你的 Windows 10 系统获得夜间模式</br>
+​	并配合<code>任务计划程序</code>，实现自动化</p>
+</br>
+
+
+<h2 class="relative group">测试 
+    <div id="%E6%B5%8B%E8%AF%95" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%B5%8B%E8%AF%95" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>本文所用环境是 win10</br>
+如果你是其它 windows 版本，请先进行以下<strong>测试</strong>：</p>
+<p><code>WIN + R</code> 打开运行，运行以下指令，它会对注册表值进行修改：</p>
+<p><code>reg.exe add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /f /d 0</code></p>
+</br>
+<p>运行后，观察一下 <code>资源管理器</code>、<code>Chrome 浏览器</code> 等，它们的窗口有没有变成<strong>暗色主题</strong></p>
+<p>将指令末尾的 <code>0</code> <strong>改成 <code>1</code></strong>，再次运行，观察这些窗口是否变成<strong>亮色主题</strong></p>
+<p><strong>若没效果 骂微软并退出</strong></p>
+</br>
+
+
+<h2 class="relative group">写 NightMode.bat (手动切换夜间模式) 
+    <div id="%E5%86%99-nightmodebat-%E6%89%8B%E5%8A%A8%E5%88%87%E6%8D%A2%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%86%99-nightmodebat-%E6%89%8B%E5%8A%A8%E5%88%87%E6%8D%A2%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>在 <code>D:\</code> 根目录下，创建一个名为 <code>.bat</code> 的隐藏文件夹，用来存放我们的脚本</p>
+<p>如果你不知道 <em>如何在资源管理器中显示隐藏文件夹</em>，百度，或把名字<strong>开头的点</strong>去掉</p>
+<hr>
+<p>经过上面的测试，你已经知道，它是怎么工作的了</p>
+<p>新建一个 <code>NightMode.bat</code> 文件，来写我们的脚本</p>
+
+
+<h3 class="relative group">思想是： 
+    <div id="%E6%80%9D%E6%83%B3%E6%98%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%80%9D%E6%83%B3%E6%98%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>​	先<strong>查询</strong>注册表 <code>AppsUseLightTheme</code> 的值</p>
+<p>​	它是<strong>亮色主题</strong>，就成设置<strong>暗色主题</strong>；是<strong>暗色主题</strong>，就设置成<strong>亮色主题</strong></p>
+<p>​	因为 reg query 会返回三个值：<code>键</code>、<code>类型</code>、<code>值</code>，我们需要用 for 循环来取 <code>值</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: D:\.bat\NightMode.bat</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 例如返回 &#34;AppsUseLightTheme REG_DWORD 0x1&#34; 时，我们要取第三个值，空格作分隔符</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="k">/f</span> <span class="s2">&#34;tokens=3 delims= &#34;</span> <span class="se">%%</span>i <span class="k">in</span> <span class="p">(</span><span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    reg query ^
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize&#34; ^
+</span></span></span><span class="line"><span class="cl"><span class="s1">    /v &#34;AppsUseLightTheme&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> 0x1<span class="o">==</span><span class="se">%%</span>i <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>       HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>       /v AppsUseLightTheme /t REG_DWORD /d 0 /f
+</span></span><span class="line"><span class="cl">        reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>       HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>       /v SystemUsesLightTheme /t REG_DWORD /d 0 /f
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="k">else</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>       HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>       /v AppsUseLightTheme /t REG_DWORD /d 1 /f
+</span></span><span class="line"><span class="cl">        reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>       HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>       /v SystemUsesLightTheme /t REG_DWORD /d 1 /f
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 这是注释，以免你忘记：1 亮色主题，0 暗色主题</span>
+</span></span></code></pre></div><p>只是简单的<strong>取反</strong>操作，我们可以看到，以上代码有重复冗余的部分</p>
+</br>
+
+
+<h3 class="relative group">稍作优化： 
+    <div id="%E7%A8%8D%E4%BD%9C%E4%BC%98%E5%8C%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%A8%8D%E4%BD%9C%E4%BC%98%E5%8C%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>​	为了可以在 for 循环中，动态更新变量值</br>
+​	我们需要在<strong>开头添加</strong> <code>setlocal enabledelayedexpansion</code>，batch 特色</p>
+<p>​	目标是查询后，取反并置值</br>
+​	因为只有 <code>0</code> 或 <code>1</code> 两种情况，我这里使用 <code>1 - foo</code> 来取反</p>
+<p>​	如果直接使用 <code>~foo</code> 取反，实际上是将 <code>0x0000 0001</code> 转换为 <code>0x1111 1110</code>，即 <code>-2</code></br>
+​	当然，你也可以用 <code>~foo + 2</code> 来实现 <del>，尽最大可能剥削压榨自己的电脑</del></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: D:\.bat\NightMode.bat</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">setlocal</span> enabledelayedexpansion
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="k">/f</span> <span class="s2">&#34;tokens=3 delims= &#34;</span> <span class="se">%%</span>i <span class="k">in</span> <span class="p">(</span><span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    reg query ^
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize&#34; ^
+</span></span></span><span class="line"><span class="cl"><span class="s1">    /v &#34;AppsUseLightTheme&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="k">set</span> <span class="k">/a</span> <span class="nv">i</span><span class="o">=</span><span class="mi">1</span><span class="o">-%%</span><span class="nv">i</span>
+</span></span><span class="line"><span class="cl">    reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>   HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>   /v AppsUseLightTheme /t REG_DWORD /d <span class="nv">!i!</span> /f
+</span></span><span class="line"><span class="cl">    reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>   HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span>   /v SystemUsesLightTheme /t REG_DWORD /d <span class="nv">!i!</span> /f
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 这是注释，以免你忘记：1 亮色主题，0 暗色主题</span>
+</span></span></code></pre></div></br>
+
+
+<h2 class="relative group">写 Auto_Nightmode.bat (准备自动化) 
+    <div id="%E5%86%99-auto_nightmodebat-%E5%87%86%E5%A4%87%E8%87%AA%E5%8A%A8%E5%8C%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%86%99-auto_nightmodebat-%E5%87%86%E5%A4%87%E8%87%AA%E5%8A%A8%E5%8C%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>脚本是我几年前写的，现在看这个命名有点难受，大小写 下划线 混用</br>
+但是 DOS 对大小写<strong>不敏感</strong> </br>
+你可以起一个 <code>aUtO_niGHt_mOdE.bAT</code> <del>，看起来很 Fashion</del></p>
+<p><strong>下面还有更特色的</strong></p>
+<hr>
+<p>这个脚本的功能是<strong>根据时间设置主题</strong></p>
+<p>晚上开夜间模式（暗色主题）</br>
+白天关夜间模式（亮色主题）</p>
+<p>先判断时间，根据目前所处时间段，跳转执行命令</p>
+<p>batch 特色：if 条件语句没有 <strong>与 或 非</strong>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: D:\.bat\Auto_Nightmode.bat</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 获取时、分</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">h</span><span class="p">=</span><span class="nv">%time:~0,2%</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">m</span><span class="p">=</span><span class="nv">%time:~3,2%</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 夜晚时间段 18:30~08:30</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nv">%h%</span> <span class="ow">GEQ</span> 0 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">LEQ</span> 8 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="p">:</span><span class="c1">: （可以将上行 LEQ 改成 LSS，省略下行 if，并将 EQU 8 那个 if 扔到外面。懒得改了）</span>
+</span></span><span class="line"><span class="cl">		<span class="p">:</span><span class="c1">: 00:00~08:00</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">NEQ</span> 8 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">			<span class="k">goto</span> <span class="nl">Night</span>
+</span></span><span class="line"><span class="cl">		<span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">:</span><span class="c1">: 08:00~08:30</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">EQU</span> 8 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="nv">%m%</span> <span class="ow">LSS</span> 30 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">				<span class="k">goto</span> <span class="nl">Night</span>
+</span></span><span class="line"><span class="cl">			<span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nv">%h%</span> <span class="ow">GEQ</span> 18 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="p">:</span><span class="c1">: 19:00~00:00</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">NEQ</span> 18 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">LSS</span> 24 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">			<span class="k">goto</span> <span class="nl">Night</span>
+</span></span><span class="line"><span class="cl">		<span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">:</span><span class="c1">: 18:30~19:00</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">EQU</span> 18 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nv">%m%</span> <span class="ow">GTR</span> 29 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">			<span class="k">goto</span> <span class="nl">Night</span>
+</span></span><span class="line"><span class="cl">		<span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 白天时间段 08:30~18:30</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nv">%h%</span> <span class="ow">GEQ</span> 8 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">LEQ</span> 18 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">NEQ</span> 8 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">			<span class="p">:</span><span class="c1">: 18:00~18:30</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">EQU</span> 18 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="nv">%m%</span> <span class="ow">LSS</span> 30 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">					<span class="k">goto</span> <span class="nl">Day</span>
+</span></span><span class="line"><span class="cl">				<span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">:</span><span class="c1">: 9:00~18:00</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">NEQ</span> 18 <span class="p">(</span> 
+</span></span><span class="line"><span class="cl">				<span class="k">goto</span> <span class="nl">Day</span>
+</span></span><span class="line"><span class="cl">			<span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">:</span><span class="c1">: 8:30~9:00</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nv">%h%</span> <span class="ow">EQU</span> 8 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="nv">%m%</span> <span class="ow">GEQ</span> 30 <span class="p">(</span>
+</span></span><span class="line"><span class="cl">				<span class="k">goto</span> <span class="nl">Day</span>
+</span></span><span class="line"><span class="cl">			<span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">Night</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">%h%</span> : <span class="nv">%m%</span> It&#39;s night
+</span></span><span class="line"><span class="cl">reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se">H</span>KCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se">/</span>v AppsUseLightTheme /t REG_DWORD /d 0 /f
+</span></span><span class="line"><span class="cl">reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se">H</span>KCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se">/</span>v SystemUsesLightTheme /t REG_DWORD /d 0 /f
+</span></span><span class="line"><span class="cl"><span class="k">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">Day</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">%h%</span> : <span class="nv">%m%</span> It&#39;s day
+</span></span><span class="line"><span class="cl">reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se">H</span>KCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se">/</span>v AppsUseLightTheme /t REG_DWORD /d 1 /f
+</span></span><span class="line"><span class="cl">reg.exe add <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se">H</span>KCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se">/</span>v SystemUsesLightTheme /t REG_DWORD /d 1 /f
+</span></span><span class="line"><span class="cl"><span class="k">exit</span>
+</span></span></code></pre></div><p>同样的，这里也有冗余</br>
+你可以像上面那样优化代码，将<strong>跳转语句</strong>改为设置变量值</br>
+这里刚好能学到 <code>goto</code> 的用法 <del>（懒得改了）</del> </br></br></p>
+<p>此时配合任务计划程序，在<strong>正确时机</strong>运行它，就已经可以实现自动化了</p>
+<p>但在进行任务计划程序的设置之前，要加一步 <code>VBScript</code> 来让它后台运行</p>
+</br>
+
+
+<h2 class="relative group">VBScript 使脚本后台运行 
+    <div id="vbscript-%E4%BD%BF%E8%84%9A%E6%9C%AC%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#vbscript-%E4%BD%BF%E8%84%9A%E6%9C%AC%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>为什么？</p>
+<p>如果你在 Windows 上部署过 <code>mysqld</code></br>
+你会发现它每天 00:00 都会弹个 cmd.exe 窗口来执行 <code>Batch Script</code></br>
+此时全屏游戏窗口会被它挤出来</p>
+<p>为实现如题所示的目标，我们创建 VBScript 脚本 <code>RunAuto_Nightmode.vbs</code></p>
+<p>它就更简单了，只是让我们写的 <code>Batch Script</code> 后台运行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vb" data-lang="vb"><span class="line"><span class="cl"><span class="c">&#39; D:\.bat\RunAuto_Nightmode.vbs
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="k">Set</span> <span class="n">shell</span> <span class="o">=</span> <span class="n">WScript</span><span class="p">.</span><span class="n">CreateObject</span><span class="p">(</span><span class="s">&#34;WScript.Shell&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">Set</span> <span class="n">fso</span> <span class="o">=</span> <span class="n">WScript</span><span class="p">.</span><span class="n">CreateObject</span><span class="p">(</span><span class="s">&#34;Scripting.FileSystemObject&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&#39; 设置当前工作目录为脚本所在的目录
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="n">shell</span><span class="p">.</span><span class="n">CurrentDirectory</span> <span class="o">=</span> <span class="n">fso</span><span class="p">.</span><span class="n">GetParentFolderName</span><span class="p">(</span><span class="n">WScript</span><span class="p">.</span><span class="n">ScriptFullName</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&#39; 使用相对路径运行批处理文件
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="n">run</span> <span class="o">=</span> <span class="n">shell</span><span class="p">.</span><span class="n">Run</span><span class="p">(</span><span class="s">&#34;Auto_Nightmode.bat&#34;</span><span class="p">,</span> <span class="n">0</span><span class="p">)</span>
+</span></span></code></pre></div></br>
+
+
+<h2 class="relative group">任务计划程序（自动执行） 
+    <div id="%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%8A%A8%E6%89%A7%E8%A1%8C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%8A%A8%E6%89%A7%E8%A1%8C" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>最后一步，在<strong>自动执行</strong>执行 <code>VBScript</code></p>
+<p>帮你回忆一下，当你的 <code>aUtO_niGHt_mOdE.bAT</code></p>
+<ul>
+<li>在 <code>08:30 ~ 18:30</code> 时间段运行时，<strong>关闭</strong>夜间模式</li>
+<li>在 <code>18:30 ~ 08:30</code> 时间段运行时，<strong>开启</strong>夜间模式</li>
+</ul>
+<p>（他们<strong>不是同一个</strong>时间段，因为我们的 24 小时 <del>“<strong>嘴</strong>里含着自己的<strong>脚</strong>”</del> 是一条<strong>衔尾蛇</strong>）</p>
+<p>虽然你可以周期性的，每过几分钟就执行它，它只是一个小脚本而已</br>
+但后台周期运行，多少都会损失一点性能</p>
+<p>所以我们要找到<strong>正确执行时机</strong></p>
+
+
+<h3 class="relative group">找出正确时机： 
+    <div id="%E6%89%BE%E5%87%BA%E6%AD%A3%E7%A1%AE%E6%97%B6%E6%9C%BA" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%89%BE%E5%87%BA%E6%AD%A3%E7%A1%AE%E6%97%B6%E6%9C%BA" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>分析过后可得出结论：</p>
+<p>​	每天 <code>08:30</code> 和 <code>18:30</code> 这两个时间点执行 <del>（废话）</del> </br></br></p>
+<p>似乎这样就可以了，但这里有个小坑</br>
+当你电脑处于 <code>关机</code>、<code>睡眠</code>、<code>休眠</code>，甚至是 <code>锁定</code> 状态下</br>
+任务计划程序都<strong>不会按计划执行</strong></p>
+<p>不难发现，从任何状态中恢复时，都需要<strong>解锁电脑</strong></p>
+<p>所以，<strong>正确执行时机</strong>：</p>
+<ol>
+<li>每天 <code>08:30</code> 和 <code>18:30</code> 这两个时间点</li>
+<li>解锁工作站时</li>
+</ol>
+
+
+<h3 class="relative group">开始操练： 
+    <div id="%E5%BC%80%E5%A7%8B%E6%93%8D%E7%BB%83" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%BC%80%E5%A7%8B%E6%93%8D%E7%BB%83" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><code>WIN + R</code> 运行 <code>taskschd.msc</code> 打开<strong>任务计划程序</strong></p>
+<p>右侧点击<strong>新建任务</strong>（不是<em>新建基本任务</em>）</p>
+<p>参照我的进行设置即可：</p>
+
+
+<h4 class="relative group">常规设置 
+    <div id="%E5%B8%B8%E8%A7%84%E8%AE%BE%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%B8%B8%E8%A7%84%E8%AE%BE%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./index.assets/image-20250202190322268.png" alt="常规设置" />
+      
+    </figure>
+</p>
+
+
+<h4 class="relative group">触发器设置 
+    <div id="%E8%A7%A6%E5%8F%91%E5%99%A8%E8%AE%BE%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%A7%A6%E5%8F%91%E5%99%A8%E8%AE%BE%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>如果你会用到远程登录，**“登录时”**触发器可能会有所帮助</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./index.assets/image-20250202190722891.png" alt="触发器设置" />
+      
+    </figure>
+</p>
+
+
+<h4 class="relative group">操作设置 
+    <div id="%E6%93%8D%E4%BD%9C%E8%AE%BE%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%93%8D%E4%BD%9C%E8%AE%BE%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>新建一个操作，内容如下</p>
+<p><strong>路径改成你自己的</strong></p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./index.assets/image-20250202190842154.png" alt="操作设置" />
+      
+    </figure>
+</p>
+
+
+<h4 class="relative group">“设置”设置 
+    <div id="%E8%AE%BE%E7%BD%AE%E8%AE%BE%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AE%BE%E7%BD%AE%E8%AE%BE%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./index.assets/image-20250202191008953.png" alt="“设置”设置" />
+      
+    </figure>
+</p>
+<p>另外两个选项卡的内容默认即可</p>
+<p>至此，你的 <code>Windows</code> 就能根据时间<strong>自动切换</strong>主题了</p>
+
+
+<h2 class="relative group">Chrome 浏览器插件 
+    <div id="chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>浏览器我们经常用到</p>
+<p>多数程序会自动检测 Windows 的系统主题</p>
+<p>当系统主题改变时，它们会自动切换自身主题</p>
+</br>
+<p>Chrome 也是如此</p>
+<p>设置一下即可（一般默认跟随系统）</p>
+<p>但其中的网页内容想要支持自动切换主题，需要网站支持</p>
+<p>并不是所有网站都支持</p>
+</br>
+<p>所以这里我推荐一个浏览器插件 <a href="https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh" target="_blank">Dark Reader</a></p>
+<p>Edge 和 Chrome 一个内核，也支持</p>
+<p>它可以对<strong>绝大多数网站</strong>提供<strong>夜间模式</strong>支持</p>
+<p>你可以进行设置，让它跟随浏览器主题</p>
+<p>而浏览器跟随系统主题</p>
+<p><code>系统主题改变</code> -&gt; <code>Chrome 主题改变</code> -&gt; <code>网页主题改变</code></p>
+<hr>
+<p>转载请注明<a href="https://ctry.tech/win_night_mode" target="_blank">原文出处</a></p>
+<p><a href="https://ctry.tech/win_night_mode" target="_blank">https://ctry.tech/win_night_mode</a></p>
+<p></br></br></p>
+<p>感觉写技术性的文章挺<strong>耗时</strong>的</p>
+<p>还没怎么弄毕业设计的事，年后又要上班 😑</p>
+<p>所以 <strong>暂时</strong> 不打算频繁更新 <strong>技术性的</strong> 了</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+          
+            
+            
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="Chill Try" src="/img/Chill-Try_hu_1da8835e6c414099.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      作者
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Chill Try
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:itry2079@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="misc/add_wechat"
+          target="_blank"
+          aria-label="Wechat"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1738377673568" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5826" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M349.517 354.324c-16.634 0-33.397 10.992-33.397 27.675 0 16.601 16.762 27.724 33.397 27.724 16.65 0 27.691-11.122 27.691-27.724 0-16.714-11.041-27.675-27.691-27.675z" fill="currentColor" p-id="5827"></path><path d="M576.784 515.166c-11.009 0-22.162 11.122-22.162 22.163 0 11.201 11.153 22.162 22.162 22.162 16.826 0 27.755-10.961 27.755-22.162 0-11.041-10.928-22.163-27.755-22.163z" fill="currentColor" p-id="5828"></path><path d="M698.75 515.166c-10.961 0-22.050 11.122-22.050 22.163 0 11.201 11.122 22.162 22.050 22.162 16.683 0 27.755-10.961 27.755-22.162 0-11.041-11.074-22.163-27.755-22.163z" fill="currentColor" p-id="5829"></path><path d="M504.687 409.722c16.762 0 27.772-11.122 27.772-27.724 0-16.683-11.009-27.675-27.772-27.675-16.601 0-33.236 10.961-33.236 27.675 0 16.601 16.683 27.724 33.236 27.724z" fill="currentColor" p-id="5830"></path><path d="M513.076 71.337c-245.153 0-443.892 198.739-443.892 443.892 0 245.138 198.739 443.876 443.892 443.876 245.138 0 443.876-198.739 443.876-443.876 0-245.153-198.739-443.892-443.876-443.892v0zM421.566 637.261c-27.675 0-49.917-5.641-77.641-11.089l-77.529 38.845 22.162-66.681c-55.526-38.845-88.73-88.842-88.73-149.738 0-105.525 99.851-188.566 221.738-188.566 109.045 0 204.541 66.359 223.73 155.716-7.12-0.772-14.208-1.334-21.424-1.334-105.284 0-188.453 78.622-188.486 175.5 0 16.167 2.539 31.676 6.847 46.511-6.814 0.514-13.692 0.836-20.667 0.836v0zM748.588 714.983l16.683 55.43-60.814-33.349c-22.162 5.561-44.438 11.074-66.519 11.074-105.476 0-188.566-72-188.566-160.891 0-88.601 83.041-160.891 188.566-160.891 99.659 0 188.374 72.241 188.374 160.891 0 50.014-33.203 94.291-77.722 127.737v0z" fill="currentColor" p-id="5831"></path></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/Chill-Try"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="misc/add_qq"
+          target="_blank"
+          aria-label="Qq"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1738377595180" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1447" xmlns:xlink="http://www.w3.org/1999/xlink" width="200.1953125" height="200"><path d="M512.009337 0C229.23422 0 0 229.23422 0 511.990663c0 282.775117 229.23422 512.009337 512.009337 512.009337 282.775117 0 512.009337-229.23422 512.009337-512.009337C1024 229.23422 794.76578 0 512.009337 0zM801.26464 668.859701c-21.737567 18.637536-49.955319-61.346999-54.007769-49.040249-9.879014 29.935842-14.529061 49.936644-43.643208 82.505644-1.550016 1.736764 33.670819 14.473036 43.643208 41.62632 9.542867 26.03279 28.143053 67.285613-93.486477 80.227308-71.375413 7.582004-122.936772-38.022067-128.09104-37.592545-9.524192 0.84037-5.284993 0-15.51883 0-8.366349 0-8.926595 0.616271-16.807397 0-2.166287-0.168074-25.883391 37.592545-131.975416 37.592545-82.225521 0-103.514891-51.748108-86.987617-80.227308 16.545949-28.460526 44.128755-36.752175 40.244378-41.252822-19.141758-22.185764-32.363577-45.921544-40.244378-67.360312-1.942188-5.341017-3.585578-10.532635-4.874145-15.51883-2.987982-11.447705-25.883391 67.229588-50.459541 49.040249-24.576149-18.170664-22.391188-64.40968-6.480185-108.687834 16.060402-44.614302 56.491529-87.585213 56.939726-97.072055 1.624715-35.295534-3.473529-41.159448 0-50.422191 7.750078-20.766473 17.19957-12.792297 17.19957-23.567706 0-135.729068 100.863057-245.761494 225.293819-245.761494 124.412088 0 225.275145 110.032426 225.275145 245.761494 0 5.210293 13.520617 0 19.982128 23.567706 1.325917 4.874145 2.259661 23.66108 0.672296 50.422191-0.746995 12.848321 34.268415 28.497875 52.364379 97.072055C828.436598 628.764722 810.321959 661.109624 801.26464 668.859701z" fill="currentColor" p-id="1448"></path></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+          
+
+          
+
+          
+          <div class="mb-10"></div>
+          
+
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\\win_night_mode\\index.md"
+        var oid_likes = "likes_posts\\win_night_mode\\index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/hello_try/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >从这里开始 - 第一篇文章</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-12-26T00:00:00&#43;00:00">24-12-26</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/good_morning_china/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >早上好中国</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-02-02T00:00:00&#43;00:00">25-02-02</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+    <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="https://www.kfc.com.cn/"
+            title="">
+            
+            帮助贫困儿童
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      Chill Try
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by Hugo
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
