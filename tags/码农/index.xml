@@ -12,20 +12,22 @@
     <lastBuildDate>Fri, 31 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%A0%81%E5%86%9C/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>让 Win10 拥有夜间模式</title>
+      <title>让 Win10 拥有夜间模式，并实现自动化切换</title>
       <link>http://localhost:1313/posts/win_night_mode/</link>
       <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
       <author>itry2079@gmail.com (Chill Try)</author>
       <guid>http://localhost:1313/posts/win_night_mode/</guid>
       <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
-  简单实用的脚本教程&lt;/br&gt;
-一起动手写 Batch 和 VBScript&lt;/br&gt;
-让你的 Windows 10 系统获得夜间模式&lt;/br&gt;
-搭配任务计划程序，实现自动化
+  &lt;strong&gt;简单实用&lt;/strong&gt;的脚本教程&lt;/br&gt;
+且&lt;strong&gt;无须配置&lt;/strong&gt;任何环境
 &lt;/div&gt;
 
 &lt;hr&gt;
-&lt;p&gt;你好，我是 &lt;strong&gt;Try&lt;/strong&gt; 😉&lt;/p&gt;</description>
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;我们码农，都很贫穷&lt;/em&gt;&lt;/br&gt;
+&lt;em&gt;夜间屏幕&lt;strong&gt;刺眼&lt;/strong&gt;的白光，时刻暗示电费的流逝&lt;/em&gt;&lt;/br&gt;
+&lt;em&gt;为了让你的显示器，在&lt;strong&gt;夜晚&lt;/strong&gt;拥有&lt;strong&gt;星空&lt;/strong&gt;的颜色&lt;/em&gt;&lt;/br&gt;
+&lt;em&gt;和我一起完成这个脚本，保护你的眼睛 &lt;del&gt;，买 OLED 屏&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;</description>
       
     </item>
     
