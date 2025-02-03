@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>感悟 on Try 的博客</title>
+    <link>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</link>
+    <description>Recent content in 感悟 on Try 的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>itry2079@gmail.com (Chill Try)</managingEditor>
+    <webMaster>itry2079@gmail.com (Chill Try)</webMaster>
+    <copyright>© 2025 Chill Try</copyright>
+    <lastBuildDate>Mon, 03 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>代价</title>
+      <link>http://localhost:1313/posts/cost/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <author>itry2079@gmail.com (Chill Try)</author>
+      <guid>http://localhost:1313/posts/cost/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
+  今天想到的一点事
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果一个女生，无条件地对我十分热情&lt;/p&gt;
+&lt;p&gt;我会和她睡，但不会珍惜她&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
