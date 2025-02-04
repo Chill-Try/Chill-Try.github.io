@@ -107,7 +107,7 @@
     "keywords": ["感悟"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "500"
+    "wordCount": "1059"
   }]
   </script>
 
@@ -649,7 +649,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-03T00:00:00&#43;00:00">25-02-03</time><span class="px-2 text-primary-500">&middot;</span><span>500 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2025-02-03T00:00:00&#43;00:00">25-02-03</time><span class="px-2 text-primary-500">&middot;</span><span>1059 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
   
 
   
@@ -709,7 +709,75 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#情景">情景</a></li>
+    <li><a href="#观点">观点</a></li>
+    <li><a href="#运用">运用</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#情景">情景</a></li>
+    <li><a href="#观点">观点</a></li>
+    <li><a href="#运用">运用</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -728,8 +796,30 @@
 <p>有必要看清自己的<strong>客观</strong>价值，并让它随时间提升</p>
 </blockquote>
 </br>
-<p><strong>现在或曾经</strong>，你是否遇到过以下情景：</p>
-<p><em>以下是 <code>付出与主观价值</code> 在不同的对等关系下，<strong>遭遇负面情况</strong>时的表现</em></p>
+
+
+<h2 class="relative group">情景 
+    <div id="%E6%83%85%E6%99%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%83%85%E6%99%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>是否遇到过以下情景：</p>
+</br>
+<ol>
+<li>
+<p>在<strong>短视频</strong>看到的，一些认为很棒的理论、知识。只会在<strong>短期</strong>内影响你</br>
+收藏，忘掉，扔收藏夹<strong>吃灰</strong></p>
+ </br>
+</li>
+<li>
+<p><em><code>付出与主观价值</code> 在不同的对等关系下，<strong>遭遇负面情况时</strong>的表现</em></p>
+</li>
+</ol>
 <table>
   <thead>
       <tr>
@@ -757,12 +847,14 @@
   </tbody>
 </table>
 </br>
-<p><em>以下是 <code>付出与主观价值</code> 在不同的对等关系下，对物品的珍惜情况</em></p>
+<ol start="3">
+<li><em><code>付出与主观价值</code> 在不同的对等关系下，对物品的<strong>珍惜程度</strong></em></li>
+</ol>
 <table>
   <thead>
       <tr>
-          <th>付出 递增</th>
-          <th>是否珍惜</th>
+          <th>情景</th>
+          <th>珍惜程度</th>
           <th>对等关系</th>
       </tr>
   </thead>
@@ -784,15 +876,102 @@
       </tr>
   </tbody>
 </table>
-<p><em>（表中的 <code>价值</code> 均指 <code>主观价值</code>，<strong>~=</strong> 是 <strong>约等于</strong> 而非不等于）</em> </br>
-<em>（各人的对各物的 <code>主观价值</code> 有不同标准，上述两例仅供参考）</em></p>
+<p><em>（表中的 <code>价值</code> 均指 <code>主观价值</code>，<strong>~=</strong> 是 <strong>约等于</strong> 而非 <del>不等于</del>）</em> </br>
+<em>（各人对各物的 <code>主观价值</code> 有不同标准，上述两例仅供参考）</em></p>
+</br>
 <hr>
+
+
+<h2 class="relative group">观点 
+    <div id="%E8%A7%82%E7%82%B9" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%A7%82%E7%82%B9" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
 <p>上面两个例子，也许不适用于你</p>
 <p>总之，想阐述的<strong>观点</strong>是：</p>
 <ul>
-<li>对于取得某物，<code>付出代价</code> 与 <code>主观价值</code> 越匹配，越会<strong>珍惜</strong>某物</li>
+<li>对于<strong>获得</strong>，<code>付出代价</code> 与 <code>主观价值</code> 越相<strong>匹配</strong>，越会<strong>珍惜</strong></br>
+<del><strong>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</strong></del></li>
 </ul>
-<p></br><strong>睡觉了，未完待续</strong></p>
+</br>
+<hr>
+
+
+<h2 class="relative group">运用 
+    <div id="%E8%BF%90%E7%94%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%BF%90%E7%94%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>它的意义所在？可以用在何处？</p>
+</br>
+<ol>
+<li>当获取你<strong>感兴趣的</strong>知识时：</li>
+</ol>
+<table>
+  <thead>
+      <tr>
+          <th>获取感兴趣的知识时</th>
+          <th>对等关系</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>短视频的浓缩内容，看起来很爽很顺畅，但<strong>不易吸收</strong></td>
+          <td>付出 <strong>&lt;&lt;</strong> 价值</td>
+      </tr>
+      <tr>
+          <td>优质书籍、长视频使其<strong>更易融合</strong>于你，成为你的一部分</td>
+          <td>付出 <strong>~=</strong> 价值</td>
+      </tr>
+      <tr>
+          <td>外文译本，译者差劲，读起来很辛苦，放弃阅读</td>
+          <td>付出 <strong>&gt;&gt;</strong> 价值</td>
+      </tr>
+  </tbody>
+</table>
+</br>
+<ol start="2">
+<li>日常工作</li>
+</ol>
+<p>不列表了，文字描述一下，还是三种关系：</p>
+<p>若 水平较<strong>差</strong>，工作太<strong>摆</strong>：领导会认为自己吃亏了</br>
+若 水平<strong>合适</strong>，态度<strong>良好</strong>：这最合适</br>
+若 态度<strong>过于积极</strong>：无论水平如何，领导会觉得不用白不用，反正都要发这么多工资</p>
+</br>
+<p><strong>玩儿命干提升慢，实属下策下下策</strong></p>
+<p>工具毕竟是工具，像人工智能一样的工具，容易被其取代</p>
+<p>个人认为<strong>想象力</strong>，亦即<strong>创造力</strong>最为重要</p>
+<p>不加班，像外国一样 WLB (Work-Life Balance)</p>
+<p>得到良好的休息，拥有更好的创造力</p>
+<p>同时，能够抽出时间提升自己的 <code>客观价值</code></p>
+<p>个人价值得到提升，公司也就能获得更多价值</p>
+</br>
+<p>但为什么，有的公司宁愿你加班当工具</p>
+<p>也不愿你提升效率，为你涨工资</p>
+<p>草台班子，领导能力较弱，认为能力太强的，不好管</p>
+<p>此时需要你在提升 <code>客观价值</code> 的同时，能够保持<strong>谦和</strong>（适度的谦虚）</p>
+</br>
+<p>也可能<strong>这位领导眼里</strong>的这个职位，他<strong>主观</strong>认为不需要给自己带来多大价值</p>
+<p>如果经济环境好就跳吧</p>
+<p>经济环境。。</p>
+<p><strong>声明：本人坚决拥护党的领导，确立拥护党的核心同志</strong></p>
+<p>这两年会有变化的</p>
+</br>
+<ol start="3">
+<li>人际关系</li>
+</ol>
+<p>TODO：两性关系、人情拖欠快速还清</p>
+<p><strong>出去玩了，未完待续</strong></p>
 </br>
 <hr>
 <p><em>本文仅为个人观点，不认同属正常现象</em></p>
