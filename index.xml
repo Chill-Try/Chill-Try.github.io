@@ -9,19 +9,7 @@
     <managingEditor>itry2079@gmail.com (Chill Try)</managingEditor>
     <webMaster>itry2079@gmail.com (Chill Try)</webMaster>
     <copyright>© 2025 Chill Try</copyright>
-    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>佳句摘录</title>
-      <link>http://localhost:1313/excerpt/</link>
-      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
-      <author>itry2079@gmail.com (Chill Try)</author>
-      <guid>http://localhost:1313/excerpt/</guid>
-      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
-  &lt;p&gt;生活中读到的佳句，大部分没有做摘录&lt;/p&gt;
-&lt;p&gt;这里列出少数摘了的，有些摘下后没写出处&lt;/p&gt;</description>
-      
-    </item>
+    <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>学了应该忘</title>
@@ -139,6 +127,18 @@
 &lt;em&gt;为了让你的显示器，在&lt;strong&gt;夜晚&lt;/strong&gt;拥有&lt;strong&gt;星空&lt;/strong&gt;的颜色&lt;/em&gt;&lt;/br&gt;
 &lt;em&gt;和我一起完成这个脚本，保护你的眼睛 &lt;del&gt;，买 OLED 屏&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/win_night_mode/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>佳句摘录</title>
+      <link>http://localhost:1313/excerpt/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <author>itry2079@gmail.com (Chill Try)</author>
+      <guid>http://localhost:1313/excerpt/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
+  &lt;p&gt;生活中读到的佳句，大部分没有做摘录&lt;/p&gt;
+&lt;p&gt;这里列出少数摘了的，有些摘下后没写出处&lt;/p&gt;</description>
+      
     </item>
     
     <item>
