@@ -131,13 +131,13 @@
     
     <item>
       <title>佳句摘录</title>
-      <link>http://localhost:1313/excerpt/</link>
+      <link>http://localhost:1313/excerpts/essay/</link>
       <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
       <author>itry2079@gmail.com (Chill Try)</author>
-      <guid>http://localhost:1313/excerpt/</guid>
+      <guid>http://localhost:1313/excerpts/essay/</guid>
       <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
-  &lt;p&gt;生活中读到的佳句，大部分没有做摘录&lt;/p&gt;
-&lt;p&gt;这里列出少数摘了的，有些摘下后没写出处&lt;/p&gt;</description>
+  &lt;p&gt;生活中读到的佳句，大多没做摘录，有些摘下后没写出处&lt;/p&gt;
+&lt;p&gt;这里会列出一些较短的段落&lt;/p&gt;</description>
       
     </item>
     

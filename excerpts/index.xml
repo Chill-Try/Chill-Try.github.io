@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Excerpts on Try 的博客</title>
-    <link>http://localhost:1313/excerpt/</link>
+    <link>http://localhost:1313/excerpts/</link>
     <description>Recent content in Excerpts on Try 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <managingEditor>itry2079@gmail.com (Chill Try)</managingEditor>
     <webMaster>itry2079@gmail.com (Chill Try)</webMaster>
     <copyright>© 2025 Chill Try</copyright>
-    <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/excerpt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/excerpts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>佳句摘录</title>
-      <link>http://localhost:1313/excerpt/essay/</link>
+      <link>http://localhost:1313/excerpts/essay/</link>
       <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
       <author>itry2079@gmail.com (Chill Try)</author>
-      <guid>http://localhost:1313/excerpt/essay/</guid>
+      <guid>http://localhost:1313/excerpts/essay/</guid>
       <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
   &lt;p&gt;生活中读到的佳句，大部分没有做摘录&lt;/p&gt;
 &lt;p&gt;这里列出少数摘了的，有些摘下后没写出处&lt;/p&gt;</description>
