@@ -184,5 +184,17 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/hello_try/featured.jpg" />
     </item>
     
+    <item>
+      <title>关于 Chill Try</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>itry2079@gmail.com (Chill Try)</author>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
+  太阳双子，月亮双子，上升双鱼
+&lt;/div&gt;</description>
+      
+    </item>
+    
   </channel>
 </rss>
