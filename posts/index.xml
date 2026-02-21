@@ -9,7 +9,20 @@
     <managingEditor>itry2079@gmail.com (Chill Try)</managingEditor>
     <webMaster>itry2079@gmail.com (Chill Try)</webMaster>
     <copyright>© 2026 Chill Try</copyright>
-    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>适合日常浏览的内容</title>
+      <link>http://localhost:1313/posts/share_resource/</link>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 +0000</pubDate>
+      <author>itry2079@gmail.com (Chill Try)</author>
+      <guid>http://localhost:1313/posts/share_resource/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
+  &lt;p&gt;自己日常浏览的 Content&lt;/p&gt;
+&lt;p&gt;求质不求量&lt;/p&gt;
+&lt;p&gt;如有其它优质内容，欢迎一起分享&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>如何戒手机</title>
