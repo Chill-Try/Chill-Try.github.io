@@ -18,9 +18,12 @@
       <author>itry2079@gmail.com (Chill Try)</author>
       <guid>http://localhost:1313/posts/share_resource/</guid>
       <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;
-  &lt;p&gt;自己日常浏览的 Content&lt;/p&gt;
-&lt;p&gt;求质不求量&lt;/p&gt;
-&lt;p&gt;如有其它优质内容，欢迎一起分享&lt;/p&gt;</description>
+  自己日常浏览的 Content，求质不求量
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://news.ycombinator.com/&#34; target=&#34;_blank&#34;&gt;Hacker News&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://hacker-podcast.agi.li/&#34; target=&#34;_blank&#34;&gt;AI 生成的 HN 播客&lt;/a&gt;（精简版）&lt;/p&gt;</description>
       
     </item>
     
